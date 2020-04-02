@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="MyUnit" transaction-type="JTA">
+        <jta-data-source>java:jboss/datasources/projects</jta-data-source>
+        <class>ch.axa.persistence.ProjectEntry</class>
+        <class>ch.axa.persistence.PersonEntry</class>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+        </properties>
+    </persistence-unit>
+</persistence>

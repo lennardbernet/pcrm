@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </link>
+</head>
+<body>
+<h1>HALLO</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Kürzel</th>
+        <th>EDIT</th>
+    </tr>
+    </thead>
+    <tbody>
+    <ui:repeat var="projects" value="#{viewController.projectEntries}">
+        <tr>
+            <td>#{projects.title}</td>
+            <td>#{projects.kuerzel}</td>
+            <td>
+                <h:link
+                        outcome="editProjects" value="edit"
+                        class="btn btn-default"
+                        action="#{viewController.edit(projects.project_id)}">
+                    <f:param name="id" value="#{projects.project_id}" />
+                </h:link>
+            </td>
+        </tr>
+    </ui:repeat>
+    </tbody>
+</table>
+</body>
+</html>

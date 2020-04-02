@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pcrm:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>pcrm</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="pcrm.war">
+      <element id="artifact" artifact-name="pcrm:war exploded" />
+    </root>
+  </artifact>
+</component>
